@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/33543c2623.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="favicon.ico" alt="">
+        </div>
+        <div class="sections">
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div class="user">
+            Username
+        </div>
+    </div>
+
+    <div class="leftright">
+        <div class="left">
+            <h1>Revitalize Your Clothes with Expert <span>Laundry Services!</span></h1>
+            <p>From premium dry cleaning to swift wash and fold, we deliver care and convenience.
+                Schedule a pickup and rediscover the freshness of your clothes today!
+            </p>
+            <button class="book">Book a service today!</button>
+        </div>
+        <div class="right">
+            <img src="https://img.freepik.com/premium-vector/cute-washing-machine-cartoon-isolated-vector-design
+            -illustration_773815-205.jpg" width="500px" height="500px" alt="Washing Machine">
+        </div>
+    </div>
+
+    <section class="section-achieve">
+        <div class="heading">
+            <h2>Our Achievements</h2>
+        </div>
+        <div class="achieve">
+            <ul>
+                <div>
+                    <span>15+</span>
+                    <li>Laundry Services</li>
+                </div>
+                <div>
+                    <span>240+</span>
+                    <li>Happy Customers</li>
+                </div>
+                <div>
+                    <span>2+ Yrs</span>
+                    <li>Experience</li>
+                </div>
+            </ul>
+        </div>
+    </section>
+
+    <div class="leri">
+        <div class="le">
+            <h2>Our Services</h2>
+            <p>Click On The Add To Cart Button To Add The Services To Your Cart</p>
+
+            <div class="service-items">
+                <span>🧺 Dry Cleaning <span class="price">₹200.00</span></span>
+                <div class="btns">
+                    <button class="add-btn">Add Item <ion-icon name="add-circle-outline"></ion-icon></button>
+                    <button class="remove-btn">Remove Item <ion-icon name="remove-circle-outline"></ion-icon></button>
+                </div>
+            </div>
+
+            <div class="service-items">
+                <span>🧼 Wash and Fold <span class="price">₹100.00</span></span>
+                <div class="btns">
+                    <button class="add-btn">Add Item <ion-icon name="add-circle-outline"></ion-icon></button>
+                    <button class="remove-btn">Remove Item <ion-icon name="remove-circle-outline"></ion-icon></button>
+                </div>
+            </div>
+
+            <div class="service-items">
+                <span>🧹 Ironing <span class="price">₹30.00</span></span>
+                <div class="btns">
+                    <button class="add-btn">Add Item <ion-icon name="add-circle-outline"></ion-icon></button>
+                    <button class="remove-btn">Remove Item <ion-icon name="remove-circle-outline"></ion-icon></button>
+                </div>
+            </div>            
+            
+            <div class="service-items">
+                <span>💧 Stain Removal <span class="price">₹500.00</span></span>
+                <div class="btns">
+                    <button class="add-btn">Add Item <ion-icon name="add-circle-outline"></ion-icon></button>
+                    <button class="remove-btn">Remove Item <ion-icon name="remove-circle-outline"></ion-icon></button>
+                </div>
+            </div>   
+
+            <div class="service-items">
+                <span>👕 Leather and Suede Cleaning <span class="price">₹999.00</span></span>
+                <div class="btns">
+                    <button class="add-btn">Add Item <ion-icon name="add-circle-outline"></ion-icon></button>
+                    <button class="remove-btn">Remove Item <ion-icon name="remove-circle-outline"></ion-icon></button>
+                </div>
+            </div>      
+
+            <div class="service-items">
+                <span>👗 Wedding Dress Cleaning <span class="price">₹2800.00</span></span>
+                <div class="btns">
+                    <button class="add-btn">Add Item <ion-icon name="add-circle-outline"></ion-icon></button>
+                    <button class="remove-btn">Remove Item <ion-icon name="remove-circle-outline"></ion-icon></button>
+                </div>
+            </div>    
+            <p class="note"><ion-icon name="information-circle-outline"></ion-icon> Add items to the cart and book now</p>        
+        </div>
+
+        <div class="ri">
+            <div class="card">
+                <h3>Added Items</h3>
+                <div id="cartItems" class="cart-items">
+                    <table id="cartTable">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Service Name</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartBody">
+                            <tr>
+                                <td colspan="3" class="empty-cart"><ion-icon name="information-circle-outline"></ion-icon> No Items Added</td>
+                                <!-- <td colspan="3" class="empty-cart">Add items to the cart from the services bar</td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- <p></p> -->
+                </div>
+                <div class="total">
+                    <span>Total Amount:</span>
+                    <span id="totalAmount">₹0.00</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Book Now</h3>
+                <form action="" id="bookingform">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" name="name" required>
+                    <label>Email Id</label>
+                    <input type="email" placeholder="mailid@gmail.com" name="email" required>
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="0001234567" name="phone" required>
+                    <button type="submit" class="book-btn">Book Now</button>
+                    <p id="thankMessage">Thank You for booking the service! We will get back to you soon!</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="quality-section">
+        <div class="quality-box">
+            <i class="fa-solid fa-shirt"></i>
+            <h3>Premium Services</h3>
+            <p>Elevate your wardrobe with our meticulous dry cleaning, ensuring garments look and feel as good as new.</p>
+        </div>
+
+        <div class="quality-box">
+            <i class="fa-solid fa-user"></i>
+            <h3>Quick Support</h3>
+            <p>We're committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
+        </div>
+
+        <div class="quality-box">
+            <i class="fa-solid fa-truck"></i>
+            <h3>Hassle Free Delivery</h3>
+            <p>Enjoy seamless service with our convenient pickup and delivery options, tailored to your schedule.</p>
+        </div>
+
+        <div class="quality-box">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <h3>Affordable Prices</h3>
+            <p>Experience exceptional care without breaking the bank - our affordable prices make laundry day stress free</p>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="ls">
+            <h2>Subscribe to our <br>newsletter.</h2>
+        </div>
+        <div class="rs">
+            <form>
+                <div class="input-row">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+            <button type="submit">Subscribe</button>
+        </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-section footer-logo">
+            <h2>Logo</h2>
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, cum!</p>
+        </div>
+
+        <div class="footer-section footer-links">
+            <h4>Important Links</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Refund Policy</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section footer-contact">
+            <h4>Contact</h4>
+            <p>mail@site.com</p>
+            <p>+91 91234 56780</p>
+        </div>
+
+        <div class="footer-section footer-social">
+            <h4>Follow Us</h4>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+        </div>
+    </footer>
+    
+    <script>
+        const EMAILJS_USER_ID = 'YOUR_EMAILJS_PUBLIC_KEY'
+        const EMAILJS_SERVICE = 'service_123'
+        const EMAILJS_TEMPLATE = 'template_add'
+
+        if(window.emailjs){
+            emailjs.init(EMAILJS_USER_ID)
+        }
+
+        const addButtons = document.querySelectorAll(".add-btn");
+        const removeButtons = document.querySelectorAll(".remove-btn");
+        const cartItemsDiv = document.getElementById("cartItems");
+        const totalAmountEl = document.getElementById("totalAmount");
+        const bookBtn = document.querySelector(".book-btn");
+        const bookingForm = document.getElementById("bookingform");
+        const thankMessage = document.getElementById("thankMessage");
+
+        let cart=[];
+
+        function parsePrice(priceText){
+            if(!priceText) return 0;
+
+            const numeric = priceText.replace(/[^\d.]/g, '');
+            return Number(numeric) || 0;
+        }
+
+        function formatRupees(num){
+            return '₹' + num.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        }
+
+        function renderCart() {
+            const cartBody = document.getElementById("cartBody");
+            cartBody.innerHTML = '';
+
+            if(cart.length == 0){
+                cartBody.innerHTML = `<tr><td colspan="3" class="empty-cart"><ion-icon name="information-circle-outline"></ion-icon> No Items Added</td></tr>`;
+                totalAmountEl.textContent = "₹0.00";
+                bookBtn.style.opacity = '0.3';
+                bookBtn.disabled = true;
+                return;
+            }
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price * item.qty;
+
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${item.name}</td>
+                    <td>₹${item.price.toFixed(2)}</td>
+                `;
+
+                cartBody.appendChild(row);
+            })
+
+            totalAmountEl.textContent = `₹${total.toFixed(2)}`;
+            bookBtn.style.opacity = '1';
+            bookBtn.disabled = false;
+        }
+
+        function addServiceFromButton(addBtn){
+            const serviceItem = addBtn.closest(".service-items");
+            const titleSpan = serviceItem.querySelector('span');
+            const priceSpan = serviceItem.querySelector('.price');
+
+            const priceText = priceSpan ? priceSpan.textContent: '';
+
+            const name = titleSpan.cloneNode(true).childNodes[0].textContent.trim();
+
+            const price = parsePrice(priceText);
+
+            const id = name.replace(/\s+/g, '-').toLowerCase();
+
+            const existing = cart.find(i => i.id === id);
+            if(existing) {
+                existing.qty += 1;
+            } else{
+                cart.push({ id, name, price, qty: 1});
+
+                const removeBtn = serviceItem.querySelector('.remove-btn');
+                if(removeBtn) removeBtn.style.display = "inline-block";
+                addBtn.style.display = "none";
+            }
+            renderCart();
+        }
+
+        function addOneToCartById(id){
+            const serviceItem = findServiceItemById(id);
+            if(serviceItem){
+                const addBtn = document.querySelector(".add-btn");
+                if(addBtn && addBtn.style.display !== "none"){
+                    addServiceFromButton(addBtn);
+                    return;
+                }
+            }
+            const existing = cart.find(i => i.id === id);
+            if(existing) {
+                existing.qty += 1;
+            }
+            renderCart();
+        }
+
+        function removeOneFromCart(id){
+            const existing = cart.find(i => i.id === id);
+            if(!existing) return;
+            existing.qty -= 1;
+            if(existing.qty <= 0){
+                cart = cart.filter(i => i.id !== id);
+                toggleServiceButtonAfterRemoval(id);
+            }
+            renderCart();
+        }
+
+        function removeAllFromCart(id){
+            cart = cart.filter(i => i.id !== id);
+            toggleServiceButtonAfterRemoval(id);
+            renderCart();
+        }
+
+        function removeServiceFromButton(removeBtn){
+            const serviceItem = removeBtn.closest('.service-items');
+            const titleSpan = serviceItem.querySelector('span');
+            const name = titleSpan.cloneNode(true).childNodes[0].textContent.trim();
+            const id = name.replace(/\s+/g, '-').toLowerCase();
+
+            cart = cart.filter(i => i.id !== id);
+
+            const addBtn = serviceItem.querySelector(".add-btn");
+            if(addBtn) addBtn.style.display = "inline-block";
+            removeBtn.style.display = "none";
+
+            renderCart();
+        }
+
+        function findServiceItemById(id){
+            const serviceItems = document.querySelectorAll('.service-items');
+            for (const si of serviceItems){
+                const titleSpan = si.querySelector('span')
+                const name = titleSpan.cloneNode(true).childNodes[0].textContent.trim();
+                const candidateId = name.replace(/\s+/g, '-').toLowerCase();
+                if(candidateId === id) return si;
+            }
+            return null;
+        }
+
+        function toggleServiceButtonAfterRemoval(id){
+            const serviceItem = findServiceItemById(id);
+            if(!serviceItem) return ;
+            const addBtn = serviceItem.querySelector('.add-btn');
+            const removeBtn = serviceItem.querySelector('.remove-btn');
+            if(addBtn) addBtn.style.display = "inline-block";
+            if(removeBtn) removeBtn.style.display = "none";
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            bookBtn.style.opacity = '0.3';
+            bookBtn.disabled = true;
+            thankMessage.style.display = "none";
+
+            document.querySelectorAll(".service-items .add-btn").forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    addServiceFromButton(btn);
+                });
+            });
+
+            document.querySelectorAll(".service-items .remove-btn").forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    removeServiceFromButton(btn);
+                });
+            });
+
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if(cart.length === 0){
+                    alert("Please add atleast one item into the cart.");
+                    return;
+                }
+
+                const formData = new FormData(bookingForm);
+                const user_name = formData.get('name');
+                const user_email = formData.get('email');
+                const user_phone = formData.get('phone');
+
+                const items_list = cart.map(ci => `${ci.name} (x ${ci.qty}) - ${formatRupees(ci.price * ci.qty)}`).join('\\n');
+                const total_amount = cart.reduce((s, it) => s + it.price * it.qty, 0);
+
+                const templateParams = {
+                    user_name,
+                    user_email,
+                    user_phone,
+                    items_list,
+                    total_amount: formatRupees(total_amount)
+                };
+
+                bookBtn.disabled = true;
+                bookBtn.style.opacity = '0.6';
+                bookBtn.textContent = "Booking...";
+
+                if(window.emailjs && EMAILJS_SERVICE !== "service_123" && EMAILJS_TEMPLATE !== "template_add"){
+                    emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE, templateParams)
+                        .then(() => {
+                            onBookingSuccess();
+                        }, (err) => {
+                            console.error("Emailjs error", err);
+                            alert("Booking email failed to send, but your booking is locally recorded.");
+                            onBookingSuccess();
+                        });
+                }else{
+                    console.warn('EmailJS is not configured. Replace EMAILJS_* constants with your IDs to enable email sending.');
+                    onBookingSuccess();
+                }
+            });
+        });
+
+        function onBookingSuccess(){
+            thankMessage.style.display = "block";
+            bookBtn.textContent = "Book Now";
+            bookBtn.disabled = false;
+            bookBtn.style.opacity = "1";
+
+
+            cart.forEach(it => toggleServiceButtonAfterRemoval(it.id));
+            cart = [];
+            renderCart();
+
+            bookingForm.reset();
+
+            setTimeout(() => {
+                thankMessage.style.display = "none";
+            }, 6000);
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</body>
+</html>
