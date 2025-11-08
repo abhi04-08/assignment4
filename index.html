@@ -232,14 +232,14 @@
             <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
         </div>
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        const EMAILJS_USER_ID = 'YOUR_EMAILJS_PUBLIC_KEY'
-        const EMAILJS_SERVICE = 'service_123'
-        const EMAILJS_TEMPLATE = 'template_add'
+        const EMAILJS_PUBLIC_KEY = 'E7V71sfG3P88dLm0O'
+        const EMAILJS_SERVICE = 'service_5kmsj3q'
+        const EMAILJS_TEMPLATE = 'template_20uvsuk'
 
         if(window.emailjs){
-            emailjs.init(EMAILJS_USER_ID)
+            emailjs.init(EMAILJS_PUBLIC_KEY)
         }
 
         const addButtons = document.querySelectorAll(".add-btn");
@@ -424,6 +424,7 @@
                 const total_amount = cart.reduce((s, it) => s + it.price * it.qty, 0);
 
                 const templateParams = {
+                    to_email : user_email,
                     user_name,
                     user_email,
                     user_phone,
@@ -435,7 +436,6 @@
                 bookBtn.style.opacity = '0.6';
                 bookBtn.textContent = "Booking...";
 
-                if(window.emailjs && EMAILJS_SERVICE !== "service_123" && EMAILJS_TEMPLATE !== "template_add"){
                     emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE, templateParams)
                         .then(() => {
                             onBookingSuccess();
@@ -444,10 +444,6 @@
                             alert("Booking email failed to send, but your booking is locally recorded.");
                             onBookingSuccess();
                         });
-                }else{
-                    console.warn('EmailJS is not configured. Replace EMAILJS_* constants with your IDs to enable email sending.');
-                    onBookingSuccess();
-                }
             });
         });
 
@@ -471,6 +467,6 @@
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
+
 </html>
